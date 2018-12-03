@@ -28,7 +28,7 @@
                     <th>Tipo</th>
                     <th>Cubagem</th>
                     <th>Placa</th>
-                    <th>Ação</th>
+                    <th>Açãoi</th>
                 </tr>
                 </thead>
             </table>

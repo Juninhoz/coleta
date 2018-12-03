@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ajudante extends Model
 {
-    protected $table = "ajudante";
+    protected $table = "ajudantes";
 
     protected $singular = 'ajudante';
     protected $plural = 'ajudantes';

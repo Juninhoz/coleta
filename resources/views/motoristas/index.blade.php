@@ -29,6 +29,7 @@
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>CNH</th>
+                    <th>Ação</th>
                 </tr>
                 </thead>
             </table>
@@ -56,17 +57,16 @@
                         {data: 'nome', name: 'nome'},
                         {data: 'email', name: 'email'},
                         {data: 'telefone', name: 'telefone'},
-                        {data: 'cnh', name: 'cnh'}
+                        {data: 'cnh', name: 'cnh'},
+                        {data: 'action', name: 'action', orderable: false, searchable: false}
                     ]
                 });
             });
 
             // var table = $('#users-table').DataTable();
 
-
         </script>
 
     @endpush
-
 
 @endsection

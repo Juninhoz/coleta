@@ -27,6 +27,8 @@
         <!--Font Awersome] -->
         <link href="/css/font-awesome.css" rel="stylesheet" />
 
+        <link href="/css/sweetalert2.css" rel="stylesheet" />
+
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -55,10 +57,24 @@
         <div class="top-nav ">
             <ul class="nav pull-right top-menu">
                 <!-- user login dropdown start-->
-
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="{{ route('home') }}" aria-expanded="false">
+                        <img alt="" src="img/avatar1_small.jpg">
+                        <span class="username">{{ auth()->user()->name }}</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-144px, 44px, 0px);">
+                        <div class="log-arrow-up"></div>
+                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="fa fa-key"></i> Log Out</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </header>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+    </form>
     <!--header end-->
     <!--sidebar start-->
     <aside>
@@ -66,7 +82,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="index.html">
+                    <a class="active" href="{{ route('home') }}">
                         <i class="fa fa-tachometer"></i>
                         <span>Dashboard</span>
                     </a>
@@ -81,6 +97,8 @@
                         <li><a href="{{ action('MotoristasController@index') }}">Motoristas</a></li>
                         <li><a href="{{ action('VeiculosController@index') }}">Veiculos</a></li>
                         <li><a href="{{ action('AjudantesController@index') }}">Ajudantes</a></li>
+                        <li><a href="">Usuarios</a></li>
+                        <li><a href="">Coletas</a></li>
                     </ul>
                 </li>
 
@@ -113,6 +131,8 @@
 <script src="/js/owl.carousel.js" ></script>
 <script src="/js/jquery.customSelect.min.js" ></script>
 <script src="/js/respond.min.js"></script>
+
+<script src="/js/sweetalert2.js"></script>
 
 <script class="include" type="text/javascript" src="/js/jquery.dcjqaccordion.2.7.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>

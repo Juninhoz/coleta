@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->action('HomeController@index');
 });
 
 Auth::routes();
@@ -53,3 +53,7 @@ Route::group(['prefix' => 'ajudantes'], function(){
 // Rotas para o datatables.
 Route::get('/motoristas-data', 'DatatablesController@anyData')->name('motoristas.data');
 Route::get('/veiculos-data', 'DatatablesController@veiculosAnyData')->name('veiculos.data');
+Route::get('/ajudantes-data', 'DatatablesController@ajudantesAnyData')->name('ajudantes.data');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

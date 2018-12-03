@@ -18,7 +18,7 @@
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Editar Motorista
+                    Editar Veiculo
                 </header>
                 <div class="panel-body">
                     <form role="form" action="{{ action('VeiculosController@update', $veiculo->id) }}" method="POST">

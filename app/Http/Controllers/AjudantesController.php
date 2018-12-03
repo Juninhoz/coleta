@@ -8,7 +8,7 @@ use App\Ajudante;
 
 class AjudantesController extends Controller
 {
-    protected $model = 'App/Ajudante';
+    protected $model = 'App\Ajudante';
 
     public function index()
     {
@@ -22,17 +22,28 @@ class AjudantesController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        $ajudante = new $this->model($request->all());
+        $ajudante->save();
+        return redirect()->action('AjudantesController@index');
     }
 
-    public function edit()
+    public function edit($id)
     {
-
+        $ajudante = Ajudante::find($id);
+        return view('ajudantes.edit')->with(['ajudante' => $ajudante]);
     }
 
-    public function update()
+    public function update($id, Request $request)
     {
+        $ajudante = Ajudante::find($id);
+        $ajudante['nome'] = $request->input('nome');
+        $ajudante['email'] = $request->input('email');
+        $ajudante['cpf'] = $request->input('cpf');
+        $ajudante['rg'] = $request->input('rg');
+        $ajudante['telefone'] = $request->input('telefone');
+        $ajudante['nascimento'] = $request->input('nascimento');
 
+        $ajudante->update();
+        return redirect()->action('AjudantesController@index');
     }
-
 }
