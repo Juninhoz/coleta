@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrateMotoristasTable extends Migration
+class CreateColetaUsuarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,12 @@ class CrateMotoristasTable extends Migration
      */
     public function up()
     {
-        Schema::create('motoristas', function( Blueprint $table ){
+        Schema::create('coleta_usuario', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
-            $table->string('email');
-            $table->string('telefone')->nullable();
-            $table->date('nascimento');
-            $table->char('sexo', 1);
-            $table->string('endereco');
-            $table->string('cnh');
+            $table->integer('usuario_id')->unsigned();
+            $table->integer('coleta_id')->unsigned();
             $table->timestamps();
         });
-
-
     }
 
     /**
@@ -35,6 +28,6 @@ class CrateMotoristasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('motoristas');
+        Schema::dropIfExists('coleta_usuario');
     }
 }

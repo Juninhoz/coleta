@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ajudante;
 use App\Motorista;
+use App\Usuario;
 use App\Veiculo;
 use Illuminate\Http\Request;
 use Yajra\Datatables\Datatables;
@@ -40,5 +41,13 @@ class DatatablesController extends Controller
             })->make(true);
     }
 
+    public function usuariosAnyData()
+    {
+        return Datatables::of(Usuario::query())
+            ->addColumn('action', function ($usuario) {
+                $url = action('UsuariosController@edit', ['id' => $usuario->id]);
+                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+            })->make(true);
+    }
 
 }

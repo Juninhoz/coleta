@@ -49,11 +49,32 @@ Route::group(['prefix' => 'ajudantes'], function(){
     Route::post('/destroy/{id}', ['as' => 'ajudante.destroy', 'uses' => 'AjudantesController@destroy']);
 });
 
+// Rotas para o gerenciamento de Usuarios ...
+Route::group(['prefix' => 'usuarios'], function(){
+    Route::get('/', ['as' => 'usuario.index', 'uses' => 'UsuariosController@index']);
+    Route::get('/create', ['as' => 'usuario.create', 'uses' => 'UsuariosController@create']);
+    Route::post('/store', ['as' => 'usuario.store', 'uses' => 'UsuariosController@store']);
+    Route::get('/edit/{id}', ['as' => 'usuario.edit', 'uses' => 'UsuariosController@edit']);
+    Route::post('/update/{id}', ['as' => 'usuario.update', 'uses' => 'UsuariosController@update']);
+    Route::post('/destroy/{id}', ['as' => 'usuario.destroy', 'uses' => 'UsuariosController@destroy']);
+});
+
+// Rotas para o gerenciamento de Usuarios ...
+Route::group(['prefix' => 'coletas'], function(){
+    Route::get('/', ['as' => 'coleta.index', 'uses' => 'ColetaController@index']);
+    Route::get('/create', ['as' => 'coleta.create', 'uses' => 'ColetaController@create']);
+    Route::post('/store', ['as' => 'coleta.store', 'uses' => 'ColetaController@store']);
+    Route::get('/edit/{id}', ['as' => 'coleta.edit', 'uses' => 'ColetaController@edit']);
+    Route::post('/update/{id}', ['as' => 'coleta.update', 'uses' => 'ColetaController@update']);
+    Route::post('/destroy/{id}', ['as' => 'coleta.destroy', 'uses' => 'ColetaController@destroy']);
+});
 
 // Rotas para o datatables.
 Route::get('/motoristas-data', 'DatatablesController@anyData')->name('motoristas.data');
 Route::get('/veiculos-data', 'DatatablesController@veiculosAnyData')->name('veiculos.data');
 Route::get('/ajudantes-data', 'DatatablesController@ajudantesAnyData')->name('ajudantes.data');
+Route::get('/usuarios-data', 'DatatablesController@usuariosAnyData')->name('usuarios.data');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

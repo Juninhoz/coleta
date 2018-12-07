@@ -97,7 +97,7 @@
                         <li><a href="{{ action('MotoristasController@index') }}">Motoristas</a></li>
                         <li><a href="{{ action('VeiculosController@index') }}">Veiculos</a></li>
                         <li><a href="{{ action('AjudantesController@index') }}">Ajudantes</a></li>
-                        <li><a href="">Usuarios</a></li>
+                        <li><a href="{{ action('UsuariosController@index') }}">Usuarios</a></li>
                         <li><a href="">Coletas</a></li>
                     </ul>
                 </li>
