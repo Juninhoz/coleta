@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ajudante;
+use App\Coleta;
 use App\Motorista;
 use App\Usuario;
 use App\Veiculo;
@@ -28,6 +29,12 @@ class ColetaController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        $users = [1,2,3];
+        $coleta = new $this->model($request->all());
+        $coleta->save();
+        $coleta->Usuario()->attach($users);
+        return redirect()->action('ColetaController@index');
     }
+
+
 }

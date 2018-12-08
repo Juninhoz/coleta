@@ -11,7 +11,6 @@ class Coleta extends Model
     protected $fillable = [
         'motorista_id',
         'ajudante_id',
-        'usuario_id',
         'veiculo_id',
         'data',
         'quantidade',
@@ -20,21 +19,21 @@ class Coleta extends Model
 
     public function Motorista()
     {
-        return $this->hasOne('App\Motorista');
+        return $this->belongsTo('App\Motorista');
     }
 
     public function Ajudante()
     {
-        return $this->hasOne('App\Ajudante');
-    }
-
-    public function Usuario()
-    {
-        return $this->hasMany('App\ColetaUsuario');
+        return $this->belongsTo('App\Ajudante');
     }
 
     public function Veiculo()
     {
-        return $this->hasOne('App\Veiculo');
+        return $this->belongsTo('App\Veiculo');
+    }
+
+    public function Usuario()
+    {
+        return $this->belongsToMany('App\Usuario');
     }
 }

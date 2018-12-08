@@ -74,6 +74,7 @@ Route::get('/motoristas-data', 'DatatablesController@anyData')->name('motoristas
 Route::get('/veiculos-data', 'DatatablesController@veiculosAnyData')->name('veiculos.data');
 Route::get('/ajudantes-data', 'DatatablesController@ajudantesAnyData')->name('ajudantes.data');
 Route::get('/usuarios-data', 'DatatablesController@usuariosAnyData')->name('usuarios.data');
+Route::get('/coletas-data', 'DatatablesController@coletasAnyData')->name('coletas.data');
 
 Auth::routes();
 

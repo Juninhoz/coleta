@@ -19,6 +19,6 @@ class Usuario extends Model
 
     public function Coleta()
     {
-        return $this->belongsTo('App\Coleta');
+        return $this->belongsToMany('App\Coleta');
     }
 }

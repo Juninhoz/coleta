@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ajudante;
+use App\Coleta;
 use App\Motorista;
 use App\Usuario;
 use App\Veiculo;
@@ -46,6 +47,26 @@ class DatatablesController extends Controller
         return Datatables::of(Usuario::query())
             ->addColumn('action', function ($usuario) {
                 $url = action('UsuariosController@edit', ['id' => $usuario->id]);
+                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+            })->make(true);
+    }
+
+    public function coletasAnyData()
+    {
+        $coleta = Coleta::all();
+
+        return Datatables::of($coleta)
+            ->addColumn('motorista', function(Coleta $coleta){
+                return $coleta->Motorista->nome;
+            })
+            ->addColumn('ajudante', function(Coleta $coleta){
+                return $coleta->Ajudante->nome;
+            })
+            ->addColumn('veiculo', function(Coleta $coleta){
+                return $coleta->Veiculo->tipo;
+            })
+            ->addColumn('action', function ($usuario) {
+                $url = action('ColetaController@edit', ['id' => $usuario->id]);
                 return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
             })->make(true);
     }

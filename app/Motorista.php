@@ -21,4 +21,9 @@ class Motorista extends Model
         'telefone',
         'cnh'
     ];
+
+    public function Coleta()
+    {
+        return $this->hasOne('App\Coleta');
+    }
 }

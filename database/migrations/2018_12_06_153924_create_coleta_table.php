@@ -16,7 +16,6 @@ class CreateColetaTable extends Migration
         Schema::create('coleta', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('motorista_id')->unsigned();
-            $table->integer('usuario_id')->unsigned();
             $table->integer('veiculo_id')->unsigned();
             $table->integer('ajudante_id')->unsigned();
             $table->date('data');
