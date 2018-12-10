@@ -33,7 +33,7 @@
                                         @endforeach
                                     </select>
                                     {{--@if($errors->has('nome'))--}}
-                                        {{--<strong style="color: red">{{ $errors->first('nome') }}</strong>--}}
+                                    {{--<strong style="color: red">{{ $errors->first('nome') }}</strong>--}}
                                     {{--@endif--}}
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <div class="form-group">
                                     <label for="">Veiculo</label>
                                     <select class="form-control" name="veiculo_id">
-                                    @foreach($veiculos as $veiculo)
+                                        @foreach($veiculos as $veiculo)
                                             <option value="{{ $veiculo->id }}">{{ $veiculo->tipo }}</option>
                                         @endforeach
                                     </select>
@@ -67,23 +67,25 @@
                             </div>
 
                             <div class="col-md-4">
+
                                 <div class="form-group">
                                     <label for="">Usuarios</label>
-                                    <select class="form-control" name="usuario_id">
+                                    <select multiple class="form-control" name="usuarios[]">
                                         @foreach($usuarios as $usuario)
                                             <option value="{{ $usuario->id }}">{{ $usuario->nome }}</option>
                                         @endforeach
                                     </select>
-                                    {{--@if($errors->has('nome'))--}}
-                                    {{--<strong style="color: red">{{ $errors->first('nome') }}</strong>--}}
-                                    {{--@endif--}}
+                                    @if($errors->has('nome'))
+                                        <strong style="color: red">{{ $errors->first('nome') }}</strong>
+                                    @endif
                                 </div>
                             </div>
 
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Data</label>
-                                    <input type="date" class="form-control" id="" placeholder="Data" name="data" value="{{ old('data') }}">
+                                    <input type="date" class="form-control" id="" placeholder="Data" name="data"
+                                           value="{{ old('data') }}">
                                     @if($errors->has('data'))
                                         <strong style="color: red">{{ $errors->first('data') }}</strong>
                                     @endif
@@ -93,7 +95,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Quantidade</label>
-                                    <input type="number" class="form-control" id="" placeholder="Quantidade" name="quantidade" value="{{ old('quantidade') }}">
+                                    <input type="number" class="form-control" id="" placeholder="Quantidade"
+                                           name="quantidade" value="{{ old('quantidade') }}">
                                     @if($errors->has('quantidade'))
                                         <strong style="color: red">{{ $errors->first('quantidade') }}</strong>
                                     @endif
@@ -104,7 +107,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Observação</label>
-                                    <input type="text" class="form-control" id="" placeholder="Observacao" name="observacao" value="{{ old('observacao') }}">
+                                    <input type="text" class="form-control" id="" placeholder="Observacao"
+                                           name="observacao" value="{{ old('observacao') }}">
                                     @if($errors->has('observacao'))
                                         <strong style="color: red">{{ $errors->first('observacao') }}</strong>
                                     @endif

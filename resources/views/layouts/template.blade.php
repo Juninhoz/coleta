@@ -21,6 +21,10 @@
         <link href="/css/style.css" rel="stylesheet">
         <link href="/css/style-responsive.css" rel="stylesheet" />
 
+        {{--<link href="/css/multi-select.css" rel="stylesheet" />--}}
+
+        <link href="/assets/select2/css/select2.min.css" rel="stylesheet" />
+
         <!--Datatables] -->
         <link href="/css/datatables.min.css" rel="stylesheet" />
 
@@ -38,6 +42,7 @@
 
         <script src="/js/jquery.js"></script>
         <script src="/js/datatables.min.js" type="text/javascript"></script>
+
 
     </head>
 
@@ -98,7 +103,7 @@
                         <li><a href="{{ action('VeiculosController@index') }}">Veiculos</a></li>
                         <li><a href="{{ action('AjudantesController@index') }}">Ajudantes</a></li>
                         <li><a href="{{ action('UsuariosController@index') }}">Usuarios</a></li>
-                        <li><a href="">Coletas</a></li>
+                        <li><a href="{{ action('ColetaController@index') }}">Coletas</a></li>
                     </ul>
                 </li>
 
@@ -133,6 +138,32 @@
 <script src="/js/respond.min.js"></script>
 
 <script src="/js/sweetalert2.js"></script>
+
+
+<!--select2-->
+<script type="text/javascript" src="/assets/select2/js/select2.min.js"></script>
+
+<script type="text/javascript" src="/assets/fuelux/js/spinner.min.js"></script>
+<script type="text/javascript" src="/assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+<script type="text/javascript" src="/assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+<script type="text/javascript" src="/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+<script type="text/javascript" src="/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="/assets/bootstrap-daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+<script type="text/javascript" src="/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script type="text/javascript" src="/assets/jquery-multi-select/js/jquery.multi-select.js"></script>
+<script type="text/javascript" src="/assets/jquery-multi-select/js/jquery.quicksearch.js"></script>
+
+{{--<script src="/js/jquery.multi-select.js" type="text/javascript"></script>--}}
+{{--<script src="/js/spinner.min.js" type="text/javascript"></script>--}}
+{{--<script src="/js/wysihtml5-0.3.0.js" type="text/javascript"></script>--}}
+{{--<script src="/js/bootstrap-colorpicker.js" type="text/javascript"></script>--}}
+{{--<script src="/js/bootstrap-timepicker.js" type="text/javascript"></script>--}}
+{{--<script src="/js/bootstrap-datetimepicker.js" type="text/javascript"></script>--}}
+
+{{--<script src="/js/advanced-form-components.js" type="text/javascript"></script>--}}
 
 <script class="include" type="text/javascript" src="/js/jquery.dcjqaccordion.2.7.js"></script>
 <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
