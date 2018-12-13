@@ -39,7 +39,6 @@ class ColetaController extends Controller
     {
         $coleta = Coleta::find($id);
         $motoristas = Motorista::all();
-        $motoristas = Motorista::all();
         $ajudantes = Ajudante::all();
         $veiculos = Veiculo::all();
         $usuarios = Usuario::all();
@@ -66,6 +65,8 @@ class ColetaController extends Controller
 
     public function show($id)
     {
+        $coleta = Coleta::find($id);
 
+        return view('coleta.show')->with(['coleta' => $coleta]);
     }
 }

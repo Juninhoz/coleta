@@ -33,4 +33,9 @@ class HomeController extends Controller
         $coletas = Coleta::all();
         return view('home')->with(['usuarios' => $usuarios, 'motoristas' => $motoristas, 'veiculos' => $veiculos, 'coletas' => $coletas]);
     }
+
+    public function map()
+    {
+        return view('map');
+    }
 }

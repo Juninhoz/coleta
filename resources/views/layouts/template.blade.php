@@ -27,7 +27,7 @@
 
         <!--Datatables] -->
         <link href="/css/datatables.min.css" rel="stylesheet" />
-
+        @stack('estilo')
         <!--Font Awersome] -->
         <link href="/css/font-awesome.css" rel="stylesheet" />
 
@@ -42,8 +42,6 @@
 
         <script src="/js/jquery.js"></script>
         <script src="/js/datatables.min.js" type="text/javascript"></script>
-
-
     </head>
 
 <body>
@@ -145,7 +143,7 @@
 
 <script type="text/javascript" src="/assets/fuelux/js/spinner.min.js"></script>
 <script type="text/javascript" src="/assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-<script type="text/javascript" src="/assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+{{--<script type="text/javascript" src="/assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>--}}
 <script type="text/javascript" src="/assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
 <script type="text/javascript" src="/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>

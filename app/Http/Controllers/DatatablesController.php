@@ -20,7 +20,7 @@ class DatatablesController extends Controller
         return Datatables::of(Motorista::query())
             ->addColumn('action', function ($motorista) {
                 $url = action('MotoristasController@edit', ['id' => $motorista->id]);
-                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Editar</a>';
             })->make(true);
     }
 
@@ -29,7 +29,7 @@ class DatatablesController extends Controller
         return Datatables::of(Veiculo::query())
             ->addColumn('action', function ($veiculo) {
                 $url = action('VeiculosController@edit', ['id' => $veiculo->id]);
-                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Editar</a>';
             })->make(true);
     }
 
@@ -38,7 +38,7 @@ class DatatablesController extends Controller
         return Datatables::of(Ajudante::query())
             ->addColumn('action', function ($ajudante) {
                 $url = action('AjudantesController@edit', ['id' => $ajudante->id]);
-                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Editar</a>';
             })->make(true);
     }
 
@@ -47,7 +47,7 @@ class DatatablesController extends Controller
         return Datatables::of(Usuario::query())
             ->addColumn('action', function ($usuario) {
                 $url = action('UsuariosController@edit', ['id' => $usuario->id]);
-                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Editar</a>';
             })->make(true);
     }
 
@@ -67,7 +67,8 @@ class DatatablesController extends Controller
             })
             ->addColumn('action', function ($usuario) {
                 $url = action('ColetaController@edit', ['id' => $usuario->id]);
-                return '<a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+                $urlShow = action('ColetaController@show', ['id' => $usuario->id]);
+                return '<a href="'.$urlShow.'" class="btn btn-xs btn-warning"><i class="fa fa-eye"></i> Visualizar</a>  <a href="'.$url.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Editar</a>';
             })->make(true);
     }
 

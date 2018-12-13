@@ -59,12 +59,13 @@ Route::group(['prefix' => 'usuarios'], function(){
     Route::post('/destroy/{id}', ['as' => 'usuario.destroy', 'uses' => 'UsuariosController@destroy']);
 });
 
-// Rotas para o gerenciamento de Usuarios ...
+// Rotas para o gerenciamento das Coletas ...
 Route::group(['prefix' => 'coletas'], function(){
     Route::get('/', ['as' => 'coleta.index', 'uses' => 'ColetaController@index']);
     Route::get('/create', ['as' => 'coleta.create', 'uses' => 'ColetaController@create']);
     Route::post('/store', ['as' => 'coleta.store', 'uses' => 'ColetaController@store']);
     Route::get('/edit/{id}', ['as' => 'coleta.edit', 'uses' => 'ColetaController@edit']);
+    Route::get('/show/{id}', ['as' => 'coleta.show', 'uses' => 'ColetaController@show']);
     Route::post('/update/{id}', ['as' => 'coleta.update', 'uses' => 'ColetaController@update']);
     Route::post('/destroy/{id}', ['as' => 'coleta.destroy', 'uses' => 'ColetaController@destroy']);
 });
@@ -79,3 +80,5 @@ Route::get('/coletas-data', 'DatatablesController@coletasAnyData')->name('coleta
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/map','HomeController@map');
