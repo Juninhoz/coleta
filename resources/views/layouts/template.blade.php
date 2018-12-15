@@ -62,7 +62,7 @@
                 <!-- user login dropdown start-->
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="{{ route('home') }}" aria-expanded="false">
-                        <img alt="" src="img/avatar1_small.jpg">
+                        <img alt="" src="{!! asset("img/avatar1_small.jpg") !!}">
                         <span class="username">{{ auth()->user()->name }}</span>
                         <b class="caret"></b>
                     </a>
