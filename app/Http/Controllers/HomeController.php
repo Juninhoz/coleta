@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Coleta;
+use App\Motorista;
+use App\Usuario;
+use App\Veiculo;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +27,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $usuarios = Usuario::all();
+        $motoristas = Motorista::all();
+        $veiculos = Veiculo::all();
+        $coletas = Coleta::all();
+        return view('home')->with(['usuarios' => $usuarios, 'motoristas' => $motoristas, 'veiculos' => $veiculos, 'coletas' => $coletas]);
+    }
+
+    public function map()
+    {
+        return view('map');
     }
 }
