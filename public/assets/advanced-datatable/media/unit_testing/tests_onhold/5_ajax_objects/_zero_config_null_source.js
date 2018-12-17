@@ -184,19 +184,19 @@ $(document).ready( function () {
 	oTest.fnTest(
 		"Information on zero config",
 		null,
-		function () { return document.getElementById('example_info').innerHTML == "Showing 1 to 10 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
 		"Information on second page",
 		function () { $('#example_next').click(); },
-		function () { return document.getElementById('example_info').innerHTML == "Showing 11 to 20 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 11 to 20 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
 		"Information on third page",
 		function () { $('#example_next').click(); },
-		function () { return document.getElementById('example_info').innerHTML == "Showing 21 to 30 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 21 to 30 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
@@ -206,7 +206,7 @@ $(document).ready( function () {
 			$('#example_next').click();
 			$('#example_next').click();
 		},
-		function () { return document.getElementById('example_info').innerHTML == "Showing 51 to 57 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 51 to 57 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
@@ -218,19 +218,19 @@ $(document).ready( function () {
 			$('#example_previous').click();
 			$('#example_previous').click();
 		},
-		function () { return document.getElementById('example_info').innerHTML == "Showing 1 to 10 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
 		"Information with 25 records",
 		function () { $("select[name=example_length]").val('25').change(); },
-		function () { return document.getElementById('example_info').innerHTML == "Showing 1 to 25 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 1 to 25 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
 		"Information with 25 records - second page",
 		function () { $('#example_next').click(); },
-		function () { return document.getElementById('example_info').innerHTML == "Showing 26 to 50 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 26 to 50 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
@@ -239,7 +239,7 @@ $(document).ready( function () {
 			$('#example_previous').click();
 			$("select[name=example_length]").val('100').change();
 		},
-		function () { return document.getElementById('example_info').innerHTML == "Showing 1 to 57 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 1 to 57 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
@@ -248,21 +248,21 @@ $(document).ready( function () {
 			$('#example_previous').click();
 			$("select[name=example_length]").val('10').change();
 		},
-		function () { return document.getElementById('example_info').innerHTML == "Showing 1 to 10 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
 		"Information with filter 'Win'",
 		function () { $('#example_filter input').val("Win").keyup(); },
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
 		"Information with filter 'Win' second page",
 		function () { $('#example_next').click(); },
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 11 to 20 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 11 to 20 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -272,7 +272,7 @@ $(document).ready( function () {
 			$('#example_next').click();
 		},
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 31 to 31 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 31 to 31 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -283,7 +283,7 @@ $(document).ready( function () {
 			$('#example_previous').click();
 		},
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -292,21 +292,21 @@ $(document).ready( function () {
 			$('#example_next').click();
 		},
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 11 to 20 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 11 to 20 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
 		"Information with filter increased to 'Win 98'",
 		function () { $('#example_filter input').val("Win 98").keyup(); },
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 9 of 9 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 9 of 9 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
 		"Information with filter decreased to 'Win'",
 		function () { $('#example_filter input').val("Win").keyup(); },
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -315,14 +315,14 @@ $(document).ready( function () {
 			$('#example_next').click();
 		},
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 11 to 20 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 11 to 20 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
 		"Information with filter removed",
 		function () { $('#example_filter input').val("").keyup(); },
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 57 entries"; }
+			"Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	
@@ -343,21 +343,21 @@ $(document).ready( function () {
 		"Filter 'W' - info",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 42 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 42 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
 		"Filter 'Wi'",
 		function () { $('#example_filter input').val("Wi").keyup(); },
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 32 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 32 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
 		"Filter 'Win'",
 		function () { $('#example_filter input').val("Win").keyup(); },
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -370,7 +370,7 @@ $(document).ready( function () {
 		"Filter 'Win' - sorting column 1 info",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 31 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 31 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -401,7 +401,7 @@ $(document).ready( function () {
 		"Filter 'Win' - sorting col 3 - reversed info",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 6 of 6 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 6 of 6 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -415,7 +415,7 @@ $(document).ready( function () {
 		"Filter 'nothinghere' - info",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 0 to 0 of 0 entries (filtered from 57 total entries)"; }
+			"Exibindo 0 to 0 of 0 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -425,7 +425,7 @@ $(document).ready( function () {
 			$('#example thead th:eq(0)').click();
 		},
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 57 entries"; }
+			"Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	oTest.fnTest(
@@ -435,7 +435,7 @@ $(document).ready( function () {
 			$('#example_filter input').val("GeckoWin").keyup();
 		},
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 0 to 0 of 0 entries (filtered from 57 total entries)"; }
+			"Exibindo 0 to 0 of 0 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest(
@@ -444,7 +444,7 @@ $(document).ready( function () {
 			$('#example_filter input').val("Gecko Win").keyup();
 		},
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 17 entries (filtered from 57 total entries)"; }
+			"Exibindo 1 to 10 of 17 entries (filtered from 57 total entries)"; }
 	);
 	
 	

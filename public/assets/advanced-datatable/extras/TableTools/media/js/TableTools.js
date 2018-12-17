@@ -1855,7 +1855,7 @@ TableTools.prototype = {
 	
 	
 	/**
-	 * Take account of scrolling in DataTables by showing the full table
+	 * Take account of scrolling in DataTables by Exibindo the full table
 	 *  @returns void
 	 *  @private 
 	 */
@@ -1911,7 +1911,7 @@ TableTools.prototype = {
 	
 	
 	/**
-	 * Take account of scrolling in DataTables by showing the full table. Note that the redraw of
+	 * Take account of scrolling in DataTables by Exibindo the full table. Note that the redraw of
 	 * the DataTable that we do will actually deal with the majority of the hard work here
 	 *  @returns void
 	 *  @private 
@@ -1958,7 +1958,7 @@ TableTools.prototype = {
 	 * Hide nodes which are not needed in order to display the table. Note that this function is
 	 * recursive
 	 *  @method  _fnPrintHideNodes
-	 *  @param   {Node} nNode Element which should be showing in a 'print' display
+	 *  @param   {Node} nNode Element which should be Exibindo in a 'print' display
 	 *  @returns void
 	 *  @private 
 	 */

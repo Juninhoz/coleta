@@ -444,7 +444,7 @@ Scroller.prototype = {
 		{
 			console.log(
 				'Scroll: '+iScrollTop+'px - boundaries: '+this.s.redrawTop+' / '+this.s.redrawBottom+'. '+
-				' Showing rows '+this.fnPixelsToRow(iScrollTop)+
+				' Exibindo rows '+this.fnPixelsToRow(iScrollTop)+
 				' to '+this.fnPixelsToRow(iScrollTop+$(this.dom.scroller).height())+
 				' in the viewport, with rows '+this.s.dt._iDisplayStart+
 				' to '+(this.s.dt._iDisplayEnd)+' rendered by the DataTable'

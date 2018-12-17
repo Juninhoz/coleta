@@ -9277,7 +9277,7 @@ wysihtml5.views.Textarea = wysihtml5.views.View.extend(
           state = this.composer.commands.state(command.name, command.value);
           if (wysihtml5.lang.object(state).isArray()) {
             // Grab first and only object/element in state array, otherwise convert state into boolean
-            // to avoid showing a dialog for multiple selected elements which may have different attributes
+            // to avoid Exibindo a dialog for multiple selected elements which may have different attributes
             // eg. when two links with different href are selected, the state will be an array consisting of both link elements
             // but the dialog interface can only update one
             state = state.length === 1 ? state[0] : true;

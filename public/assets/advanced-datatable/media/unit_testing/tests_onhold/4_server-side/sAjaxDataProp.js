@@ -126,19 +126,19 @@ $(document).ready( function () {
 	oTest.fnWaitTest(
 		"Information on zero config",
 		null,
-		function () { return document.getElementById('example_info').innerHTML == "Showing 1 to 10 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	oTest.fnWaitTest(
 		"Information on second page",
 		function () { $('#example_next').click(); },
-		function () { return document.getElementById('example_info').innerHTML == "Showing 11 to 20 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 11 to 20 of 57 entries"; }
 	);
 	
 	oTest.fnWaitTest(
 		"Information on third page",
 		function () { $('#example_next').click(); },
-		function () { return document.getElementById('example_info').innerHTML == "Showing 21 to 30 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML == "Exibindo 21 to 30 of 57 entries"; }
 	);
 	
 	

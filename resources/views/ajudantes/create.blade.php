@@ -49,7 +49,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Identidade</label>
-                                    <input type="text" class="form-control" id="" placeholder="Identidade" name="rg" value="{{ old('rg') }}">
+                                    <input type="number" class="form-control" id="" placeholder="Identidade" name="rg" value="{{ old('rg') }}">
                                     @if($errors->has('rg'))
                                         <strong style="color: red">{{ $errors->first('rg') }}</strong>
                                     @endif
@@ -58,7 +58,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">CPF</label>
-                                    <input type="text" class="form-control" id="" placeholder="CPF" name="cpf" value="{{ old('cpf') }}">
+                                    <input type="text" class="form-control" id="" placeholder="CPF" data-mask="999.999.999.99" name="cpf" value="{{ old('cpf') }}">
                                     @if($errors->has('cpf'))
                                         <strong style="color: red">{{ $errors->first('cpf') }}</strong>
                                     @endif
@@ -68,7 +68,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Telefone</label>
-                                    <input type="text" class="form-control" id="" placeholder="Telefone" name="telefone" value="{{ old('telefone') }}">
+                                    <input type="text" class="form-control" id="" placeholder="Telefone" name="telefone" data-mask="(99) 9999-9999" value="{{ old('telefone') }}">
                                     @if($errors->has('telefone'))
                                         <strong style="color: red">{{ $errors->first('telefone') }}</strong>
                                     @endif

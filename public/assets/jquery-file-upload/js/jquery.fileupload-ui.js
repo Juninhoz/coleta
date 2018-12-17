@@ -114,7 +114,7 @@
                         data.dataType.substr(0, 6) === 'iframe') {
                     // Iframe Transport does not support progress events.
                     // In lack of an indeterminate progress bar, we set
-                    // the progress to 100%, showing the full animated bar:
+                    // the progress to 100%, Exibindo the full animated bar:
                     data.context
                         .find('.progress').addClass(
                             !$.support.transition && 'progress-animated'

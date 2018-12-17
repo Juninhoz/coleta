@@ -10,6 +10,12 @@ class UsuariosController extends Controller
 {
     protected $model = 'App\Usuario';
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         return view('usuarios.index');

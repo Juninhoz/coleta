@@ -21,7 +21,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Check that the info element has been updated",
 		null,
-		function () { return $('#example_info').html() == "Showing 1 to 10 of 56 entries"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 10 of 56 entries"; }
 	);
 	
 	

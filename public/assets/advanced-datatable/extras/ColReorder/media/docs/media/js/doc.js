@@ -1,7 +1,7 @@
 
 (function() {
 
-var showingNav = true;
+var ExibindoNav = true;
 
 $(document).ready( function () {
 	var jqNav = $('div.fw_nav');
@@ -16,7 +16,7 @@ $(document).ready( function () {
 	$('#private_toggle').click( function () {
 		if ( $('input[name=show_private]').val() == 0 ) {
 			$('input[name=show_private]').val( 1 );
-			$('#private_label').html('Showing');
+			$('#private_label').html('Exibindo');
 			$('.private').css('display', 'block');
 		} else {
 			$('input[name=show_private]').val( 0 );
@@ -30,7 +30,7 @@ $(document).ready( function () {
 	$('#extended_toggle').click( function () {
 		if ( $('input[name=show_extended]').val() == 0 ) {
 			$('input[name=show_extended]').val( 1 );
-			$('#extended_label').html('Showing');
+			$('#extended_label').html('Exibindo');
 			$('.augmented').css('display', 'block');
 		} else {
 			$('input[name=show_extended]').val( 0 );
@@ -43,18 +43,18 @@ $(document).ready( function () {
 
 	var savedHeight = $(jqNav).height();
 	$('div.fw_nav h2').click( function () {
-		if ( showingNav ) {
+		if ( ExibindoNav ) {
 			$('div.fw_nav').animate( {
 				"height": 10,
 				"opacity": 0.3
 			} );
-			showingNav = false;
+			ExibindoNav = false;
 		} else {
 			$('div.fw_nav').animate( {
 				"height": savedHeight,
 				"opacity": 1
 			} );
-			showingNav = true;
+			ExibindoNav = true;
 		}
 		fnWriteCookie();
 	} );
@@ -70,7 +70,7 @@ $(document).ready( function () {
 		}
 		if ( a[2] == 'false' ) {
 			$('div.fw_nav').css('height', 10).css('opacity', 0.3);
-			showingNav = false;
+			ExibindoNav = false;
 		}
 	}
 } );
@@ -81,7 +81,7 @@ function fnWriteCookie()
 	var sVal = 
 		$('input[name=show_private]').val()+'-'+
 		$('input[name=show_extended]').val()+'-'+
-		showingNav;
+		ExibindoNav;
 	
 	fnCreateCookie( 'SpryMedia_JSDoc', sVal );
 }

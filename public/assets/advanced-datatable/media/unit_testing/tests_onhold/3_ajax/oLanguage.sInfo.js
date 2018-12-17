@@ -9,15 +9,15 @@ $(document).ready( function () {
 	var oSettings = oTable.fnSettings();
 	
 	oTest.fnWaitTest( 
-		"Info language is 'Showing _START_ to _END_ of _TOTAL_ entries' by default",
+		"Info language is 'Exibindo _START_ de _END_ of _TOTAL_ entradas' by default",
 		null,
-		function () { return oSettings.oLanguage.sInfo == "Showing _START_ to _END_ of _TOTAL_ entries"; }
+		function () { return oSettings.oLanguage.sInfo == "Exibindo _START_ de _END_ of _TOTAL_ entradas"; }
 	);
 	
 	oTest.fnTest( 
 		"Info language default is in the DOM",
 		null,
-		function () { return document.getElementById('example_info').innerHTML = "Showing 1 to 10 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML = "Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	

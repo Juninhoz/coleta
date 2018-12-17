@@ -37,7 +37,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Cubagem</label>
-                                    <input type="text" class="form-control" id="" placeholder="Cubagem" name="cubagem" value="{{ old('cubagem') }}">
+                                    <input type="number" class="form-control" id="" placeholder="Cubagem" name="cubagem" value="{{ old('cubagem') }}">
                                     @if($errors->has('cubagem'))
                                         <strong style="color: red">{{ $errors->first('cubagem') }}</strong>
                                     @endif
@@ -49,7 +49,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Placa</label>
-                                    <input type="text" class="form-control" id="" placeholder="Placa" name="placa" value="{{ old('placa') }}">
+                                    <input type="text" class="form-control" id="" placeholder="Placa" name="placa" data-mask="aaa-9999" value="{{ old('placa') }}">
                                     @if($errors->has('placa'))
                                         <strong style="color: red">{{ $errors->first('placa') }}</strong>
                                     @endif
@@ -69,3 +69,11 @@
     </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+
+
+    </script>
+
+@endpush

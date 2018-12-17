@@ -706,7 +706,7 @@ ColReorder.prototype = {
 		{
 			/* Only create the drag element if the mouse has moved a specific distance from the start
 			 * point - this allows the user to make small mouse movements when sorting and not have a
-			 * possibly confusing drag element showing up
+			 * possibly confusing drag element Exibindo up
 			 */
 			if ( Math.pow(
 				Math.pow(e.pageX - this.s.mouse.startX, 2) + 

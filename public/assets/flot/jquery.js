@@ -7792,7 +7792,7 @@ jQuery.fx.prototype = {
 		// flash of content
 		this.custom(this.prop === "width" || this.prop === "height" ? 1 : 0, this.cur());
 
-		// Start by showing the element
+		// Start by Exibindo the element
 		jQuery( this.elem ).show();
 	},
 

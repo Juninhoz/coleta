@@ -18,8 +18,8 @@
         <div class="row state-overview">
             <div class="col-lg-3 col-sm-6">
                 <section class="card">
-                    <div class="symbol terques">
-                        <i class="fa fa-user"></i>
+                    <div class="symbol blue">
+                        <i class="fa fa-users"></i>
                     </div>
                     <div class="value">
                         <h1>{{ count($usuarios) }}</h1>
@@ -30,7 +30,7 @@
             <div class="col-lg-3 col-sm-6">
                 <section class="card">
                     <div class="symbol red">
-                        <i class="fa fa-tags"></i>
+                        <i class="fa fa-user"></i>
                     </div>
                     <div class="value">
                         <h1>{{ count($motoristas) }}</h1>
@@ -40,8 +40,8 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <section class="card">
-                    <div class="symbol yellow">
-                        <i class="fa fa-shopping-cart"></i>
+                    <div class="symbol blue">
+                        <i class="fa fa-car"></i>
                     </div>
                     <div class="value">
                         <h1>{{ count($veiculos) }}</h1>
@@ -51,7 +51,7 @@
             </div>
             <div class="col-lg-3 col-sm-6">
                 <section class="card">
-                    <div class="symbol blue">
+                    <div class="symbol red">
                         <i class="fa fa-bar-chart-o"></i>
                     </div>
                     <div class="value">
@@ -62,13 +62,5 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
 
 @endsection

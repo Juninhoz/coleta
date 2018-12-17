@@ -31,7 +31,7 @@ $(document).ready( function () {
 		"Info takes length into account",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 57 entries"; }
+			"Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	/* Check can disable */
@@ -50,7 +50,7 @@ $(document).ready( function () {
 		"Information takes length disabled into account",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 57 entries"; }
+			"Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	/* Enable makes no difference */

@@ -117,7 +117,7 @@
 		return $.data(element, "tooltip");
 	}
 	
-	// main event handler to start showing tooltips
+	// main event handler to start Exibindo tooltips
 	function handle(event) {
 		// show helper, either with timeout or on instant
 		if( settings(this).delay )
