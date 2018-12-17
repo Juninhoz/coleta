@@ -10,6 +10,12 @@ class AjudantesController extends Controller
 {
     protected $model = 'App\Ajudante';
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         return view('ajudantes.index');
@@ -20,7 +26,7 @@ class AjudantesController extends Controller
         return view('ajudantes.create');
     }
 
-    public function store(Request $request)
+    public function store(AjudantesRequest $request)
     {
         $ajudante = new $this->model($request->all());
         $ajudante->save();
@@ -33,7 +39,7 @@ class AjudantesController extends Controller
         return view('ajudantes.edit')->with(['ajudante' => $ajudante]);
     }
 
-    public function update($id, Request $request)
+    public function update($id, AjudantesRequest $request)
     {
         $ajudante = Ajudante::find($id);
         $ajudante['nome'] = $request->input('nome');

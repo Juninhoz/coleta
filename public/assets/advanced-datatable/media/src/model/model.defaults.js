@@ -693,7 +693,7 @@ DataTable.defaults = {
 
 	/**
 	 * When rendering large numbers in the information element for the table
-	 * (i.e. "Showing 1 to 10 of 57 entries") DataTables will render large numbers
+	 * (i.e. "Exibindo 1 to 10 of 57 entries") DataTables will render large numbers
 	 * to have a comma separator for the 'thousands' units (e.g. 1 million is
 	 * rendered as "1,000,000") to help readability for the end user. This
 	 * function will override the default method DataTables uses.
@@ -1452,7 +1452,7 @@ DataTable.defaults = {
 		 * variables are all dynamically replaced as the table display updates, and 
 		 * can be freely moved or removed as the language requirements change.
 		 *  @type string
-		 *  @default Showing _START_ to _END_ of _TOTAL_ entries
+		 *  @default Exibindo _START_ de _END_ of _TOTAL_ entradas
 		 *  @dtopt Language
 		 * 
 		 *  @example
@@ -1464,14 +1464,14 @@ DataTable.defaults = {
 		 *      } );
 		 *    } );
 		 */
-		"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+		"sInfo": "Exibindo _START_ de _END_ of _TOTAL_ entradas",
 	
 	
 		/**
 		 * Display information string for when the table is empty. Typically the 
 		 * format of this string should match sInfo.
 		 *  @type string
-		 *  @default Showing 0 to 0 of 0 entries
+		 *  @default Exibindo 0 to 0 of 0 entries
 		 *  @dtopt Language
 		 * 
 		 *  @example
@@ -1483,7 +1483,7 @@ DataTable.defaults = {
 		 *      } );
 		 *    } );
 		 */
-		"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+		"sInfoEmpty": "Exibindo 0 to 0 of 0 entries",
 	
 	
 		/**

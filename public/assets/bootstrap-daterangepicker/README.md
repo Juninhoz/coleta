@@ -41,7 +41,7 @@ Additional options allow:
 * Starting the calendar week on any day of week
 * Overriding the direction the dropdown expands (left/right of element it's attached to)
 * Setting the date format string for parsing and printing dates
-* Showing week numbers
+* Exibindo week numbers
 
 Syntax for all the options can be found in the examples.html file.
 

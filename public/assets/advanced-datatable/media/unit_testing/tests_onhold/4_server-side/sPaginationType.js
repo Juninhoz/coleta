@@ -98,7 +98,7 @@ $(document).ready( function () {
 			nLast.click();
 		},
 		function () {
-			return document.getElementById('example_info').innerHTML == "Showing 51 to 57 of 57 entries";
+			return document.getElementById('example_info').innerHTML == "Exibindo 51 to 57 of 57 entries";
 		}
 	);
 	
@@ -109,7 +109,7 @@ $(document).ready( function () {
 			nPrevious.click();
 		},
 		function () {
-			return document.getElementById('example_info').innerHTML == "Showing 31 to 40 of 57 entries";
+			return document.getElementById('example_info').innerHTML == "Exibindo 31 to 40 of 57 entries";
 		}
 	);
 	
@@ -119,7 +119,7 @@ $(document).ready( function () {
 			nNext.click();
 		},
 		function () {
-			return document.getElementById('example_info').innerHTML == "Showing 41 to 50 of 57 entries";
+			return document.getElementById('example_info').innerHTML == "Exibindo 41 to 50 of 57 entries";
 		}
 	);
 	
@@ -129,7 +129,7 @@ $(document).ready( function () {
 			nFirst.click();
 		},
 		function () {
-			return document.getElementById('example_info').innerHTML == "Showing 1 to 10 of 57 entries";
+			return document.getElementById('example_info').innerHTML == "Exibindo 1 to 10 of 57 entries";
 		}
 	);
 	

@@ -570,7 +570,7 @@ bars in a particular the series object in the array of data.
 The most important options are "lines", "points" and "bars" that
 specify whether and how lines, points and bars should be shown for
 each data series. In case you don't specify anything at all, Flot will
-default to showing lines (you can turn this off with
+default to Exibindo lines (you can turn this off with
 lines: { show: false }). You can specify the various types
 independently of each other, and Flot will happily draw each of them
 in turn (this is probably only useful for lines and points), e.g.

@@ -1,5 +1,5 @@
 /*
-Flot plugin for showing crosshairs, thin lines, when the mouse hovers
+Flot plugin for Exibindo crosshairs, thin lines, when the mouse hovers
 over the plot.
 
   crosshair: {

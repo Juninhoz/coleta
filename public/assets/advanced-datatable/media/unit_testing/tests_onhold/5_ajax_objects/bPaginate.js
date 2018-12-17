@@ -24,7 +24,7 @@ $(document).ready( function () {
 		"Information div takes paging into account",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 10 of 57 entries"; }
+			"Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	/* Check can disable */
@@ -51,7 +51,7 @@ $(document).ready( function () {
 		"Information div takes paging disabled into account",
 		null,
 		function () { return document.getElementById('example_info').innerHTML == 
-			"Showing 1 to 57 of 57 entries"; }
+			"Exibindo 1 to 57 of 57 entries"; }
 	);
 	
 	/* Enable makes no difference */

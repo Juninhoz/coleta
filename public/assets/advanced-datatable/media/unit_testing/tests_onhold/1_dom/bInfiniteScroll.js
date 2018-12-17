@@ -17,7 +17,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Info",
 		null,
-		function () { return $('#example_info').html() == "Showing 1 to 10 of 57 entries"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	oTest.fnTest( 
@@ -35,7 +35,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Info after 20px scroll",
 		null,
-		function () { return $('#example_info').html() == "Showing 1 to 20 of 57 entries"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 20 of 57 entries"; }
 	);
 	
 	oTest.fnTest( 
@@ -53,7 +53,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Info after 10 more px scroll",
 		null,
-		function () { return $('#example_info').html() == "Showing 1 to 20 of 57 entries"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 20 of 57 entries"; }
 	);
 	
 	oTest.fnWaitTest( 
@@ -65,7 +65,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Info after 240px scroll",
 		null,
-		function () { return $('#example_info').html() == "Showing 1 to 30 of 57 entries"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 30 of 57 entries"; }
 	);
 	
 	oTest.fnTest( 
@@ -86,7 +86,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Info after filtering",
 		null,
-		function () { return $('#example_info').html() == "Showing 1 to 10 of 20 entries (filtered from 57 total entries)"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 10 of 20 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest( 

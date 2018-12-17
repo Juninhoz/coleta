@@ -58,7 +58,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Telefone</label>
-                                    <input type="text" class="form-control" id="" placeholder="Telefone" name="telefone" value="{{ $motorista->telefone }}">
+                                    <input type="text" class="form-control" id="" data-mask="(99) 999-9999" placeholder="Telefone" name="telefone" value="{{ $motorista->telefone }}">
                                     @if($errors->has('telefone'))
                                         <strong style="color: red">{{ $errors->first('telefone') }}</strong>
                                     @endif
@@ -70,7 +70,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">CNH</label>
-                                    <input type="text" class="form-control" id="" placeholder="CNH" name="cnh" value="{{ $motorista->cnh }}">
+                                    <input type="text" class="form-control" data-mask="9999999999" id="" placeholder="CNH" name="cnh" value="{{ $motorista->cnh }}">
                                     @if($errors->has('cnh'))
                                         <strong style="color: red">{{ $errors->first('cnh') }}</strong>
                                     @endif

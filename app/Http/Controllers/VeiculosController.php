@@ -9,6 +9,12 @@ class VeiculosController extends Controller
 {
     protected $model = 'App\Veiculo';
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         return view('veiculos.index');

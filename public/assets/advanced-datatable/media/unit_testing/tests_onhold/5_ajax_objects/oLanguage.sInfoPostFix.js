@@ -24,7 +24,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Width no post fix, the basic info shows",
 		null,
-		function () { return document.getElementById('example_info').innerHTML = "Showing 1 to 10 of 57 entries"; }
+		function () { return document.getElementById('example_info').innerHTML = "Exibindo 1 to 10 of 57 entries"; }
 	);
 	
 	
@@ -53,7 +53,7 @@ $(document).ready( function () {
 	oTest.fnTest( 
 		"Info empty language default is in the DOM",
 		null,
-		function () { return document.getElementById('example_info').innerHTML = "Showing 1 to 10 of 57 entries unit test"; }
+		function () { return document.getElementById('example_info').innerHTML = "Exibindo 1 to 10 of 57 entries unit test"; }
 	);
 	
 	
@@ -75,7 +75,7 @@ $(document).ready( function () {
 				}
 			} );
 		},
-		function () { return document.getElementById('example_info').innerHTML = "Showing 1 to 10 of 57 entries unit _START_ _END_ _TOTAL_ test"; }
+		function () { return document.getElementById('example_info').innerHTML = "Exibindo 1 to 10 of 57 entries unit _START_ _END_ _TOTAL_ test"; }
 	);
 	
 	
@@ -98,7 +98,7 @@ $(document).ready( function () {
 			} );
 			oTable.fnFilter("nothinghere");
 		},
-		function () { return document.getElementById('example_info').innerHTML = "Showing 0 to 0 of 0 entries unit (filtered from 57 total entries) test"; }
+		function () { return document.getElementById('example_info').innerHTML = "Exibindo 0 to 0 of 0 entries unit (filtered from 57 total entries) test"; }
 	);
 	
 	

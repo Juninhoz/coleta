@@ -13,6 +13,12 @@ class ColetaController extends Controller
 {
     protected $model = 'App\Coleta';
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         return view('coleta.index');

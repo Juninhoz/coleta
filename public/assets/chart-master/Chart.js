@@ -937,7 +937,7 @@ window.Chart = function(context){
 		}
 		function calculateXAxisSize(){
 			var longestText = 1;
-			//if we are showing the labels
+			//if we are Exibindo the labels
 			if (config.scaleShowLabels){
 				ctx.font = config.scaleFontStyle + " " + config.scaleFontSize+"px " + config.scaleFontFamily;
 				for (var i=0; i<calculatedScale.labels.length; i++){
@@ -1139,7 +1139,7 @@ window.Chart = function(context){
 		}
 		function calculateXAxisSize(){
 			var longestText = 1;
-			//if we are showing the labels
+			//if we are Exibindo the labels
 			if (config.scaleShowLabels){
 				ctx.font = config.scaleFontStyle + " " + config.scaleFontSize+"px " + config.scaleFontFamily;
 				for (var i=0; i<calculatedScale.labels.length; i++){

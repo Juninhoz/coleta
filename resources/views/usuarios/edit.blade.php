@@ -61,7 +61,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="">Senha</label>
-                                    <input type="text" class="form-control" id="" placeholder="Senha" name="senha" value="{{ $usuario->senha }}">
+                                    <input type="password" class="form-control" id="" placeholder="Senha" name="senha" value="{{ $usuario->senha }}">
                                     @if($errors->has('senha'))
                                         <strong style="color: red">{{ $errors->first('senha') }}</strong>
                                     @endif

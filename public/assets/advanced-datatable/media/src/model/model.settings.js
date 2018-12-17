@@ -60,7 +60,7 @@ DataTable.models.oSettings = {
 		"bFilter": null,
 		
 		/**
-		 * Table information element (the 'Showing x of y records' div) enable
+		 * Table information element (the 'Exibindo x of y records' div) enable
 		 * flag.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.

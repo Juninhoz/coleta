@@ -40,7 +40,7 @@ $(document).ready( function () {
 				]
 			} );
 		},
-		function () { return $('#example_info').html() == "Showing 1 to 9 of 9 entries (filtered from 57 total entries)"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 9 of 9 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest( 
@@ -76,7 +76,7 @@ $(document).ready( function () {
 				]
 			} );
 		},
-		function () { return $('#example_info').html() == "Showing 1 to 3 of 3 entries (filtered from 57 total entries)"; }
+		function () { return $('#example_info').html() == "Exibindo 1 to 3 of 3 entries (filtered from 57 total entries)"; }
 	);
 	
 	oTest.fnTest( 

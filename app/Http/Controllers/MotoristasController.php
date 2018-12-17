@@ -10,6 +10,12 @@ class MotoristasController extends Controller
 {
     public $model = 'App\Motorista';
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
         return view('motoristas.index');
